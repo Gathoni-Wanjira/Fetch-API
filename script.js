@@ -1,4 +1,10 @@
 console.log("Hello");
 
-fetch("https://regres.in/api/users/1")
-.then(res => console.log(res))
+fetch("https://jsonplaceholder.typicode.com/users")
+    .then(function (res) {
+        return res.json();
+    }).then(function (data) {
+        console.log(data);
+    })
+
+// JSON is a format that allows you to see data from an API.
